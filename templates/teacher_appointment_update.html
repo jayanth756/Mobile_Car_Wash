@@ -64,9 +64,10 @@
                              <table class="table">
                                        <thead>
                                         <tr>
-                                          <th scope="col">Date</th>
-                                          <th scope="col">Time</th>
-                                          <th scope="col">Room Number</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Time</th>
+                                            <th scope="col">Vehicle Number</th>
+                                            <th scope="col">Place</th>
                                           
                                         </tr>
                                       </thead>{% for appoint in query %} <!--For Loop for all post -->
@@ -76,8 +77,9 @@
                                           <td>{{appoint.date}}</td>
                                           <td>{{appoint.time_start}} - {{appoint.time_end}}</td>
                                           <td>{{appoint.room_number}}</td>
+                                            <td>dghd</td>
                                           <td><button title="Already booked, Not editable" type="button" class="btn btn-primary">Booked By: {{appoint.appointment_with}}</button></td>
-                                          </td>
+
                                         </tr>
                                       </tbody>{% endif %}
 
@@ -87,6 +89,7 @@
                                           <td>{{appoint.date}}</td>
                                           <td>{{appoint.time_start}} - {{appoint.time_end}}</td>
                                           <td>{{appoint.room_number}}</td>
+                                            <td>std</td>
                                           <td><a href='{% url "appointment_delete" id=appoint.id %}'><button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></a> <a href='{% url "teacher_appointment_update" id=appoint.id %}'><button type="submit" class="btn btn-danger"><i class="far fa-edit"></i></button></a></td>
 
                                         </tr>
@@ -108,7 +111,7 @@
            <div class="container">
           <div class="row">
               <div class="col-sm-12">
-                             Copyright 2018 , Developed By Saroar                      
+
               </div>
        
           </div>

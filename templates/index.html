@@ -1,12 +1,12 @@
 {% extends 'common.html' %}
-
+{% load static %}
 {% block body%}
-    <div class="login">
+    <div class="login" style = "background: url('{% static 'css/image/123.webp' %}'); background-repeat: repeat-x;background-size: cover;">
            <div class="container height">
 				  <div class="row">
 					    <div class="col-sm-6 offset-md-3">
 
-	                            <h2 class="Login">Login To Continue</h2><br>
+	                            <h2 class="Login" >Welcome To Car Care<br>
 	                           <form method="POST" action=""> {% csrf_token %}
 						    		<div class="input-group mb-3">
 									  <div class="input-group-prepend">
@@ -29,8 +29,8 @@
 								</form>
 
 
-								<a class="regi" href="{% url 'register_teacher'%}">Sign Up For Admin</a> |
-								<a class="regi" href="{% url 'register_student'%}">Sign Up For User</a>
+								<a class="regi" href="{% url 'register_teacher'%}" style="color: #e0142d;background-color: #f3e97a; ">Sign Up For Admin</a> |
+								<a class="regi" href="{% url 'register_student'%}" style="color: #e0142d;background-color: #f3e97a; ">Sign Up For User</a>
 					    </div>
 
 	     

@@ -11,9 +11,9 @@ def group_check(request):
 	group_name=Group.objects.all().filter(user = request.user)# get logget user grouped name
 	group_name=str(group_name[0]) # convert to string
 
-	if "Student" == group_name:
+	if "User" == group_name:
 		return redirect('http://127.0.0.1:8000/student/')
-	elif "Teacher" == group_name:
+	elif "Admin" == group_name:
 		return redirect('http://127.0.0.1:8000/teacher/')
 
 def logout_view(request):

@@ -11,7 +11,7 @@ from django.contrib.auth.models import Group
 def quick_appointmnet(request):
 	group_name=Group.objects.all().filter(user = request.user)# get logget user grouped name
 	group_name=str(group_name[0]) # convert to string
-	if "Student" == group_name:
+	if "User" == group_name:
 		user_name=request.user.get_username()
 		appointment_list = Appointment.objects.all().order_by("-user")
 		q=request.GET.get("q")#search start
@@ -32,7 +32,7 @@ def quick_appointmnet(request):
 def student(request):#this section for my appointment
 	group_name=Group.objects.all().filter(user = request.user)# get logget user grouped name
 	group_name=str(group_name[0]) # convert to string
-	if "Student" == group_name:
+	if "User" == group_name:
 		user_name=request.user.get_username()#Getting Username
 		#Getting all Post and Filter By Logged UserName
 		appointment_list = Appointment.objects.all().order_by("-id").filter(appointment_with=user_name)
@@ -53,7 +53,7 @@ def student(request):#this section for my appointment
 def appointment_book(request, id):#activate after clicking book now button
 	group_name=Group.objects.all().filter(user = request.user)# get logget user grouped name
 	group_name=str(group_name[0]) # convert to string
-	if "Student" == group_name:
+	if "User" == group_name:
 		user_name=request.user.get_username()
 		single_appointment= Appointment.objects.get(id=id)
 		form = single_appointment

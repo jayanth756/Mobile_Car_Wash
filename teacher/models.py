@@ -18,7 +18,7 @@ class Appointment(models.Model):
 	def __str__(self): 
 		return self.time_start
 	def __str__(self): 
-		return selftime_end
+		return self.time_end
 	def __str__(self): 
 		return self.room_number
 	def __str__(self): 

@@ -10,7 +10,7 @@ from django.contrib.auth.models import Group
 def teacher(request):#this section for my appointment
 	group_name=Group.objects.all().filter(user = request.user)# get logget user grouped name
 	group_name=str(group_name[0]) # convert to string
-	if "Teacher" == group_name:
+	if "Admin" == group_name:
 		user_name=request.user.get_username()#Getting Username
 
 		#Getting all Post and Filter By Logged UserName
@@ -32,7 +32,7 @@ def teacher(request):#this section for my appointment
 def teacher_appointment_list(request):
 	group_name=Group.objects.all().filter(user = request.user)# get logget user grouped name
 	group_name=str(group_name[0]) # convert to string
-	if "Teacher" == group_name:
+	if "Admin" == group_name:
 		user_name=request.user.get_username()#Getting Username
 
 		#Getting all Post and Filter By Logged UserName
@@ -62,7 +62,7 @@ def teacher_appointment_list(request):
 def appointment_delete(request, id):
 	group_name=Group.objects.all().filter(user = request.user)# get logget user grouped name
 	group_name=str(group_name[0]) # convert to string
-	if "Teacher" == group_name:
+	if "Admin" == group_name:
 		single_appointment= Appointment.objects.get(id=id)
 		single_appointment.delete()
 		messages.success(request, 'Your profile was updated.')
@@ -73,7 +73,7 @@ def appointment_delete(request, id):
 def teacher_appointment_update(request,id):
 	group_name=Group.objects.all().filter(user = request.user)# get logget user grouped name
 	group_name=str(group_name[0]) # convert to string
-	if "Teacher" == group_name:
+	if "Admin" == group_name:
 		user_name=request.user.get_username()#Getting Username
 
 		#Getting all Post and Filter By Logged UserName
