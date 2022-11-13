@@ -1,12 +1,12 @@
-Prograd Webapplication Task
+ProGrad Webapplication Task
 
-Problem Statement: web based application for mobile car-wash
+Problem Statement: Web based application for mobile car-wash
 
 Tech Stack: Django
 
 Front-end : HTML, CSS,JAVA SCRIPT.
 
-Back -end : Python
+Back-end : Python
 
 DataBase: Sqlite
 
