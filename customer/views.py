@@ -24,7 +24,7 @@ def quick_appointmnet(request):
 		    "query": appointment_list,
 		    "user_name":user_name
 		}
-		return render(request, 'student_quick_appointmnet.html', appointments )
+		return render(request, 'customer_quick_appointmnet.html', appointments )
 	else:
 		return redirect('http://127.0.0.1:8000/')
 
@@ -46,7 +46,7 @@ def student(request):#this section for my appointment
 		    "query": appointment_list,
 		    "user_name":user_name,    
 		}
-		return render(request, 'student.html', appointments )
+		return render(request, 'customer.html', appointments )
 	else:
 		return redirect('http://127.0.0.1:8000/')
 

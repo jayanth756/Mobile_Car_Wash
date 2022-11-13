@@ -25,7 +25,7 @@ def teacher(request):#this section for my appointment
 		    "query": appointment_list,
 		    "user_name":user_name
 		}
-		return render(request, 'teacher.html', appointments )
+		return render(request, 'admin.html', appointments )
 	else:
 		return redirect('http://127.0.0.1:8000/') 
 
@@ -54,7 +54,7 @@ def teacher_appointment_list(request):
 			    saving.user=request.user
 			    saving.save()
 			    messages.success(request, 'Post Created Sucessfully')
-		return render(request, 'teacher_create_appointment.html', appointments )
+		return render(request, 'admin_create_appointment.html', appointments )
 	else:
 		return redirect('http://127.0.0.1:8000/')
 
@@ -100,6 +100,6 @@ def teacher_appointment_update(request,id):
 		    "form":form,
 		}
 
-		return render(request, 'teacher_appointment_update.html', appointments )
+		return render(request, 'admin_appointment_update.html', appointments )
 	else:
 		return redirect('http://127.0.0.1:8000/')

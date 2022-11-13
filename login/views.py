@@ -22,8 +22,8 @@ def logout_view(request):
 
 
 class register_teacher(TemplateView):
-  template_name = "register_teacher.html"
+  template_name = "register_admin.html"
 
 class register_student(TemplateView):
-  template_name = "register_student.html"
+  template_name = "register_customer.html"
 

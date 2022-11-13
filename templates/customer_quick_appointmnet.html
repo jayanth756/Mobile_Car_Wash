@@ -1,6 +1,6 @@
-{% extends 'common_student.html' %}
+{% extends 'common_customer.html' %}
 
-{% block common_student %}
+{% block common_customer %}
 
    <div class="student">
            <div class="container">
@@ -13,7 +13,7 @@
                                 </div>
                                 <div class="col-sm-5">
                                       <form class="form-inline my-2 my-lg-0" method="GET" action="">
-                                          <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search By Place Name" placeholder="Search With Name" aria-label="Search">
+                                          <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search By Date" placeholder="Search With Name" aria-label="Search">
                                           <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search">Search</button>
                                        </form>
                                 </div>
@@ -37,7 +37,7 @@
                                     <td>{{appoint.date}}</td>
                                     <td> 
                                       <span class="inline">{{appoint.time_start}} - {{appoint.time_end}} 
-                                          {{appoint.room_number}}<a href='{% url "appointment_update" id=appoint.id %}'> <button class="btn btn-primary" type="submit">Book Now</button></a></span> 
+                                         <a href='{% url "appointment_update" id=appoint.id %}'> <button class="btn btn-primary" type="submit">Book Now</button></a></span>
                                     </td>
                                    {% endif %}
                                   </tr>{% endfor %}<!--End For loop-->
@@ -64,7 +64,7 @@
 
 
     
-{% endblock common_student %}
+{% endblock common_customer %}
 
 
 

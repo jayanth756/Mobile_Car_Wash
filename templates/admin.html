@@ -1,6 +1,6 @@
-{% extends 'common_student.html' %}
+{% extends 'common_admin.html' %}
 
-{% block common_student %}
+{% block common_admin %}
 
    <div class="student">
            <div class="container">
@@ -13,9 +13,10 @@
                                 </div>
                                 <div class="col-sm-5">
                                       <form class="form-inline my-2 my-lg-0" method="GET" action="">
-                                          <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search By Place Name" placeholder="Search With Name" aria-label="Search">
+                                          <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search Name/Date" placeholder="Search With Name" aria-label="Search">
                                           <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search">Search</button>
                                        </form>
+
                                 </div>
  
                             </div>
@@ -23,24 +24,27 @@
                              <table class="table">
                                  <thead>
                                   <tr>
-                                    <th scope="col">Appointments </th>
+                                    <th scope="col">Appointment With</th>
                                     <th scope="col">Date</th>
                                     <th scope="col">Time</th>
                                     <th scope="col">Vehicle Number</th>
+                                      <th scope="col">Place</th>
                                     
                                   </tr>
-                                </thead>
-                             <tbody>{% for appoint in query %} <!--For loop-->
+                                </thead>{% for appoint in query %}
+                                {% if appoint.appointment_with != '' %}
+   
+                                <tbody>
                                   <tr>
-                                    <th scope="row">{{appoint.user}}</th>
-                                    <td>{{appoint.date}}</td>
-                                    <td>{{appoint.time_start}} - {{appoint.time_end}}</td>
-                                    <td>{{appoint.room_number}}</td>
-                                  </tr>{% endfor %}<!--End For loop--> 
-
-                                </tbody>
+                                    <th scope="row">{{appoint.appointment_with}}</th>
+                                          <td>{{appoint.date}}</td>
+                                          <td>{{appoint.time_start}} - {{appoint.time_end}}</td>
+                                          <td>{{appoint.vechilenum}}</td>
+                                          <td>{{appoint.place}}</td>
+                                  </tr>{% endif %}
+                                </tbody>{% endfor %}
                             </table>
-                                                                                             
+                                   
               </div>
        
           </div>
@@ -61,7 +65,7 @@
 
 
     
-{% endblock common_student %}
+{% endblock common_admin %}
 
 
 

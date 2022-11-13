@@ -7,10 +7,10 @@
    	             <div class="col-sm-8">            
 						     <ul class="nav nav-pills">
 								  <li class="nav-item">
-								    <a class="nav-link" href='{% url "student"%}'>My Appointments</a>
+								    <a class="nav-link" href='{% url "student"%}'>View Appointments</a>
 								  </li>
 								  <li class="nav-item">
-								    <a class="nav-link" href='{% url "quick_appointmnet"%}'>Get Appointment</a>
+								    <a class="nav-link" href='{% url "quick_appointmnet"%}'>Book Your Slot</a>
 								  </li>
 
 							  </ul>	                             
@@ -32,9 +32,9 @@
 	  </div>
     </div>
 
-    {% block common_student %}
+    {% block common_customer %}
     
-    {% endblock common_student %}
+    {% endblock common_customer %}
 
 {% endblock %}
 

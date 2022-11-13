@@ -8,6 +8,6 @@ class AppointmentForm(forms.ModelForm):
 		    "date",
 		    "time_start",
 		    "time_end",
-		    "room_number",
+		    "place",
 		    "appointment_with"
 		]
