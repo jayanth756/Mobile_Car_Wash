@@ -65,3 +65,9 @@ Updating Appointment for customers
 
 
 
+Administration Django
+
+
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/110041643/201539522-a2f2d9e9-3ca2-4ba3-a2df-f130630f7e46.png">
+
+
